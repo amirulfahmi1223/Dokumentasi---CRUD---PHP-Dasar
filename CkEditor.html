@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CkEditor</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+  <div class="section">
+    <div class="container">
+      <h3>Edit Data Produk<h3>
+          <div class="box">
+            <form action="" method="POST" enctype="multipart/form-data">
+              <select class="input-control" name="kategori" required>
+                <option value="">--- Pilih ---</option>
+              </select>
+              <input type="text" name="nama" class="input-control" placeholder="Nama Produk" required>
+              <input type="text" name="harga" class="input-control" placeholder="Harga" required>
+              <textarea class="input-control" name="deskripsi"></textarea>
+              <input type="file" name="gambar" class="input-control" placeholder="" required>
+
+              <select class="input-control" name="status">
+                <option value="">--Pilih--</option>
+                <option value="1">Aktif</option>
+                <option value="0">Tidak Aktif</option>
+              </select>
+              <input type="submit" name="submit" value="Submit" class="btn">
+            </form>
+          </div>
+    </div>
+  </div>
+  <script src="//cdn.ckeditor.com/4.20.0/standard/ckeditor.js"></script>
+  <script>
+    CKEDITOR.replace('deskripsi', {
+      uiColor: '#eaeaea'
+      // warna
+    });
+  </script>
+</body>
+
+</html>
